@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { QueryService } from './query.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  resp = this.queryService.test();
+
+  constructor(
+    private queryService: QueryService
+  ) {
+
+  }
+
   title = 'crickmetric-app';
 }
