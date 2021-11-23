@@ -1,7 +1,7 @@
 import csv from 'csvtojson';
 import fs from 'fs';
-import { Match, PlayerBattingStats, PlayerBowlingStats, PlayerInnings, TeamBattingStats, TeamBowlingStats, TeamStats } from '../types';
-import { matchModel, playerInningsModel, teamBattingStatsModel, teamBowlingStatsModel } from '../model';
+import { Match, PlayerBattingStats, PlayerBowlingStats, PlayerInnings, TeamStats } from '../types';
+import { MatchModel, PlayerInningsModel, TeamStatsModel } from '../model';
 
 const datasetPaths = {
     playerInnings: './../../dataset/player-innings.csv',
@@ -57,7 +57,7 @@ playerInningsReadStream.on('data', async (chunk) => {
             } as PlayerBowlingStats;
         }
 
-        const playerInningsDoc = new playerInningsModel(playerInnings);
+        const playerInningsDoc = new PlayerInningsModel(playerInnings);
         await playerInningsDoc.save();
     } catch (err) {
         console.error(err);
@@ -93,7 +93,7 @@ teamStatsReadStream.on('data', async (chunk) => {
             }
         };
 
-        const teamStatsDoc = new teamBattingStatsModel(teamStats);
+        const teamStatsDoc = new TeamStatsModel(teamStats);
         await teamStatsDoc.save();
     } catch (err) {
         console.error(err);
@@ -117,7 +117,7 @@ matchesReadStream.on('data', async (chunk) => {
             date: utils.getDate(record.date)
         };
 
-        const matchDoc = new matchModel(match);
+        const matchDoc = new MatchModel(match);
         await matchDoc.save();
     } catch (err) {
         console.error(err);

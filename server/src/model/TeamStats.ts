@@ -3,7 +3,7 @@ import { TeamStats } from '../types';
 const { Schema } = mongoose;
 
 
-const teamBattingStatsSchema = new Schema<TeamStats>({
+const teamStatsSchema = new Schema<TeamStats>({
     batting: {
         country: String,
         matchesPlayed: Number,
@@ -28,4 +28,4 @@ const teamBattingStatsSchema = new Schema<TeamStats>({
     }
 });
 
-export const teamBattingStatsModel = mongoose.model('TeamBattingStats', teamBattingStatsSchema);
+export const TeamStatsModel = mongoose.model('TeamStats', teamStatsSchema);

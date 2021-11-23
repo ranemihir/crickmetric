@@ -27,4 +27,4 @@ const playerInningsSchema = new Schema<PlayerInnings>({
     }
 });
 
-export const playerInningsModel = mongoose.model('PlayerInnings', playerInningsSchema);
+export const PlayerInningsModel = mongoose.model('PlayerInnings', playerInningsSchema);

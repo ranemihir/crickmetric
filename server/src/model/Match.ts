@@ -16,4 +16,4 @@ const matchSchema = new Schema<Match>({
     date: Date
 });
 
-export const matchModel = mongoose.model('Match', matchSchema);
+export const MatchModel = mongoose.model('Match', matchSchema);
