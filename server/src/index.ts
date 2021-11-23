@@ -2,7 +2,7 @@ import express, { Express, Request, Response } from 'express';
 import helmet from 'helmet';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import './config/stats';
+import search from './routes/search';
 
 dotenv.config();
 
@@ -14,10 +14,6 @@ app.use(cors({
     origin: '*'
 }));
 app.use(helmet());
-app.get('/', (req: Request, res: Response) => {
-    res.status(200).json({
-        data: 'Hello World! :)'
-    });
-});
+app.use(search);
 
 app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
