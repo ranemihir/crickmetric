@@ -4,6 +4,9 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import search from './routes/search';
 
+import './db';
+import './config/seed-data';
+
 dotenv.config();
 
 const PORT = process.env.PORT || 3000;
