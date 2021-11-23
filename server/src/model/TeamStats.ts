@@ -4,8 +4,8 @@ const { Schema } = mongoose;
 
 
 const teamStatsSchema = new Schema<TeamStats>({
+    team: String,
     batting: {
-        country: String,
         matchesPlayed: Number,
         matchesWon: Number,
         matchesLost: Number,
@@ -19,7 +19,6 @@ const teamStatsSchema = new Schema<TeamStats>({
         lowestCompletedScoreBatting: Number
     },
     bowling: {
-        country: String,
         avgRunsPerWicketBowling: Number,
         avgRunsPerSixBallsBowling: Number,
         numberOfTeamInningsBowling: Number,

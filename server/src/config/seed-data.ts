@@ -29,8 +29,8 @@ playerInningsReadStream.on('data', async (chunk) => {
 
         const playerInnings: PlayerInnings = {
             player: record.player,
-            country: record.country,
-            oppositionTeam: record.oppositionTeam.slice(2),
+            team: record.country,
+            opposition: record.oppositionTeam.slice(2),
             date: utils.getDate(record.date),
             battedFlag: utils.getBoolean(record.battedFlag),
             bowledFlag: utils.getBoolean(record.bowledFlag)
@@ -69,8 +69,8 @@ teamStatsReadStream.on('data', async (chunk) => {
         const record = utils.getJson(chunk);
 
         const teamStats: TeamStats = {
+            team: record.country,
             batting: {
-                country: record.country,
                 matchesPlayed: Number(record.matchesPlayed),
                 matchesWon: Number(record.matchesWon),
                 matchesLost: Number(record.matchesLost),
@@ -84,7 +84,6 @@ teamStatsReadStream.on('data', async (chunk) => {
                 lowestCompletedScoreBatting: Number(record.lowestCompletedScoreBatting)
             },
             bowling: {
-                country: record.country,
                 avgRunsPerWicketBowling: Number(record.avgRunsPerWicketBowling),
                 avgRunsPerSixBallsBowling: Number(record.avgRunsPerSixBallsBowling),
                 numberOfTeamInningsBowling: Number(record.numberOfTeamInningsBowling),
@@ -105,13 +104,13 @@ matchesReadStream.on('data', async (chunk) => {
         const record = utils.getJson(chunk);
 
         const match: Match = {
-            country: record.country,
+            team: record.country,
             result: ((record.result === 'Won') ? true : false),
             margin: {
                 magnitude: Number(record.margin.split(' ')[0]),
                 runsOrWickes: ((record.margin.split(' ')[1] === 'runs') ? true : false)
             },
-            oppositionTeam: ((record.country === record.team1) ? record.team2 : record.team1),
+            opposition: ((record.country === record.team1) ? record.team2 : record.team1),
             homeOrAway: ((record.homeOrAway === 'Home') ? true : false),
             ground: record.ground,
             date: utils.getDate(record.date)

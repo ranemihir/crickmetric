@@ -1,11 +1,11 @@
 export interface Match {
-    country: string;
+    team: string;
     result: boolean;
     margin: {
         magnitude: number,
         runsOrWickes: boolean;
     };
-    oppositionTeam: string;
+    opposition: string;
     homeOrAway: boolean;
     ground: string;
     date: Date;

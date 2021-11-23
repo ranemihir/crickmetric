@@ -4,13 +4,13 @@ const { Schema } = mongoose;
 
 
 const matchSchema = new Schema<Match>({
-    country: String,
+    team: String,
     result: Boolean,
     margin: {
         magnitude: Number,
         runsOrWickes: Boolean
     },
-    oppositionTeam: String,
+    opposition: String,
     homeOrAway: Boolean,
     ground: String,
     date: Date

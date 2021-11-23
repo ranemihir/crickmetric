@@ -5,8 +5,8 @@ const { Schema } = mongoose;
 
 const playerInningsSchema = new Schema<PlayerInnings>({
     player: String,
-    country: String,
-    oppositionTeam: String,
+    team: String,
+    opposition: String,
     date: Date,
     battedFlag: Boolean,
     battingStats: {
