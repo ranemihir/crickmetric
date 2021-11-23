@@ -7,12 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class QueryService {
-
   constructor(
     private http: HttpClient
   ) { }
-
-  test() {
-    return this.http.get(environment.apiUrl);
-  }
 }

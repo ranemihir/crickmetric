@@ -1,13 +1,13 @@
 import { Match } from './Match';
 import { PlayerInnings, PlayerBattingStats, PlayerBowlingStats } from './PlayerInnings';
-import { TeamBattingStats } from './TeamBattingStats';
-import { TeamBowlingStats } from './TeamBowlingStats';
+import { TeamStats, TeamBattingStats, TeamBowlingStats } from './TeamStats';
 
 export {
     Match,
     PlayerInnings,
     PlayerBattingStats,
     PlayerBowlingStats,
+    TeamStats,
     TeamBattingStats,
     TeamBowlingStats,
 };

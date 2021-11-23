@@ -7,7 +7,6 @@ const playerInningsSchema = new Schema<PlayerInnings>({
     player: String,
     country: String,
     oppositionTeam: String,
-    ground: String,
     date: Date,
     battedFlag: Boolean,
     battingStats: {

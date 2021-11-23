@@ -1,3 +1,8 @@
+export interface TeamStats {
+    batting: TeamBattingStats,
+    bowling: TeamBowlingStats;
+}
+
 export interface TeamBattingStats {
     country: string;
     matchesPlayed: number;
@@ -11,4 +16,13 @@ export interface TeamBattingStats {
     numberOfTeamInningsBatting: number;
     highestTeamScoreBatting: number;
     lowestCompletedScoreBatting: number;
+}
+
+export interface TeamBowlingStats {
+    country: string;
+    avgRunsPerWicketBowling: number;
+    avgRunsPerSixBallsBowling: number;
+    numberOfTeamInningsBowling: number;
+    highestTeamScoreBowling: number;
+    lowestCompletedScoreBowling: number;
 }

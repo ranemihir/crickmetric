@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { QueryService } from './query.service';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +8,20 @@ import { QueryService } from './query.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  resp = this.queryService.test();
+  form: FormGroup = new FormGroup({
+    playerInnings: new FormGroup({
+
+    }),
+    teamStats: new FormGroup({
+
+    }),
+    matches: new FormGroup({
+
+    })
+  });
 
   constructor(
     private queryService: QueryService
-  ) {
+  ) { }
 
-  }
-
-  title = 'crickmetric-app';
 }

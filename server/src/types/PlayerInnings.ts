@@ -2,7 +2,6 @@ export interface PlayerInnings {
     player: string;
     country: string;
     oppositionTeam: string;
-    ground: string;
     date: Date;
     battedFlag: boolean;
     battingStats?: PlayerBattingStats;
