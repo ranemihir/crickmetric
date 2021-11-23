@@ -1,4 +1,4 @@
-export interface TeamBowlingStat {
+export interface TeamBowlingStats {
     country: string;
     avgRunsPerWicketBowling: number;
     avgRunsPerSixBallsBowling: number;

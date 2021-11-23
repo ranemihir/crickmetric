@@ -1,21 +1,13 @@
 import { Match } from './Match';
-import { PlayerInning, PlayerBattingStat, PlayerBowlingStat } from './PlayerInning';
-import { TeamBattingStat } from './TeamBattingStat';
-import { TeamBowlingStat } from './TeamBowlingStat';
-
-interface Stats {
-    matches: Match[];
-    playerInnings: PlayerInning[];
-    teamBattingStats: TeamBattingStat[];
-    teamBowlingStats: TeamBowlingStat[];
-}
+import { PlayerInnings, PlayerBattingStats, PlayerBowlingStats } from './PlayerInnings';
+import { TeamBattingStats } from './TeamBattingStats';
+import { TeamBowlingStats } from './TeamBowlingStats';
 
 export {
     Match,
-    PlayerInning,
-    PlayerBattingStat,
-    PlayerBowlingStat,
-    TeamBattingStat,
-    TeamBowlingStat,
-    Stats
+    PlayerInnings,
+    PlayerBattingStats,
+    PlayerBowlingStats,
+    TeamBattingStats,
+    TeamBowlingStats,
 };

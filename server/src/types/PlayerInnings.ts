@@ -1,16 +1,16 @@
-export interface PlayerInning {
+export interface PlayerInnings {
     player: string;
     country: string;
     oppositionTeam: string;
     ground: string;
     date: Date;
     battedFlag: boolean;
-    battingStat?: PlayerBattingStat;
+    battingStats?: PlayerBattingStats;
     bowledFlag: boolean;
-    bowlingStat?: PlayerBowlingStat;
+    bowlingStats?: PlayerBowlingStats;
 }
 
-export interface PlayerBattingStat {
+export interface PlayerBattingStats {
     runsScored: number;
     notOutFlag: boolean;
     ballsFaced: number;
@@ -19,7 +19,7 @@ export interface PlayerBattingStat {
     battingStrikeRate: number;
 }
 
-export interface PlayerBowlingStat {
+export interface PlayerBowlingStats {
     oversBowled: number;
     maidensBowled: number;
     runsConceded: number;

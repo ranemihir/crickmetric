@@ -1,4 +1,4 @@
-export interface TeamBattingStat {
+export interface TeamBattingStats {
     country: string;
     matchesPlayed: number;
     matchesWon: number;
