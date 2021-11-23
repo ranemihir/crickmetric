@@ -2,7 +2,7 @@ import express, { Express, Request, Response } from 'express';
 import helmet from 'helmet';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import './config/data';
+import './config/stats';
 
 dotenv.config();
 
